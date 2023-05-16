@@ -1,6 +1,6 @@
 const express = require("express")
 const { createcCoupons, updateCoupons, deleteCoupons, getAllCoupons } = require("../controller/couponCtrl")
-const { authMiddleware, isAdmin } = require("../middlewares/authMiddleWare")
+const { authMiddleware, isAdmin } = require("../middlewares/authMiddleware")
 const router = express.Router()
 
 router.get("/",authMiddleware,getAllCoupons)
